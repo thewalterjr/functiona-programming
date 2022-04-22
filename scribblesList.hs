@@ -29,7 +29,11 @@ main = do
    print (take 4 lista)  -- [2, 4, 6, 8]
    print (product lista) -- estouro de memória!!!
 ---------------------------  
+anosBissextos:: [Int]
+anosBissextos = [i | i <- [1..2022], (mod i 4 == 0 && mod i 100 /= 0) || mod i 400 == 0]
 
+main = print (anosBissextos)
+---------------------------
 
 
 
